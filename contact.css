@@ -1,0 +1,377 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: "roboto slab";
+}
+ol, ul {
+    list-style: none;
+    
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(233, 233, 233);
+    line-height: 1;
+    font-family: "roboto slab";
+    padding-top:60px;
+}
+
+
+/*------------------------------------*\
+START / NAV
+\*------------------------------------*/
+header{
+    display: flex;
+}
+
+
+.nav{
+    background-color:#6B1215;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top:0;
+    left:0;
+    
+}
+
+.navlist{
+    margin-right: 0px auto;
+    padding: 0; 
+    float: right;
+}
+.nav-list-item{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    margin-left: 35px;
+}
+.nav-list-item:hover{
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+@media only screen and (max-width: 768px){ 
+    .nav{
+        display: block;
+    }
+    .navlist{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+        left: 0;
+        width: 100%;
+        margin-top: 60px;
+        top: 0;
+        background-color: #600D0F;;
+        position: fixed;
+        transform: translateY(-1000px);
+    }
+    
+    .nav-list-item{
+        margin-left: 0;
+    }
+    
+    .navlist li{
+        display: block;
+        text-align: center;
+        margin-top: -15%;
+    }
+    
+    .withSidebar .navlist{
+        transform: translateY(0);
+    }
+    .withSidebar .nav-list-item:hover{
+        border-bottom: 1px solid white;
+    }
+/*------------------------------------*\
+Btn
+\*------------------------------------*/
+.buttonBurger{
+    float:right;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 40px;
+    padding:0;
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  .buttonBurger__top, .buttonBurger__middle, .buttonBurger__bottom{
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left:0;
+    background:white;
+    transition: all .4s ease;
+  }
+  .buttonBurger__top{
+    top: 0%;
+  }
+  .buttonBurger__top--active{
+    top: 50%;
+    margin-top:-2px;
+    transform: rotate(405deg);
+  }
+  .buttonBurger__middle{
+    top: 50%;
+    margin-top:-2px;
+  }
+  .buttonBurger__middle--active{
+    transform: rotate(405deg);
+  }
+  .buttonBurger__bottom{
+    top: 100%;
+    margin-top:-4px;
+  }
+  .buttonBurger__bottom--active{
+    top: 50%;
+    margin-top:-2px;
+    transform: rotate(675deg);
+  }
+  .buttonBurger:hover .buttonBurger__top{
+    top: 50%;
+    margin-top:-2px;
+  }
+  .buttonBurger:hover .buttonBurger__bottom{
+    top: 50%;
+    margin-top:-2px;
+  }
+
+    }
+/*------------------------------------*\
+HEADER
+\*------------------------------------*/
+.logo{
+    background: url("img/plate2.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:calc(100vh - 60px);
+}
+@media only screen and (max-width: 768px){
+.logo{
+    background: url("img/planche.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:calc(100vh - 60px);
+}
+}
+
+.logo img {
+    margin: 0 auto;
+    padding: 3%;
+    
+}
+
+.logo h1 {
+    font-family: Arizonia;
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 1px 1px 10px black;  
+}
+/*------------------------------------*\
+FORMULAIRE
+\*------------------------------------*/
+main{
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    font-size: 1.5rem;
+    color: #6B1215;
+    margin: 10px 0 6px 0;
+    text-align: center;
+ }
+ h2{
+    margin: 0 0 20px 0;
+ }
+ h1 h2{
+     text-align: center;
+ }
+ #contact-form {
+    background-color:rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 15px rgba(41, 41, 41, 0.2);
+    padding: 10px 20px 30px 20px;
+    max-width:100%;
+    margin-top:40px;
+    margin-bottom: 50px;
+    border-radius:7px;
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+ }
+ #contact-form input,   
+ #contact-form select,   
+ #contact-form textarea,   
+ #contact-form label { 
+    font-size: 15px;
+    font-family: "roboto";
+    margin-bottom: 2px;
+ } 
+ #contact-form input,   
+ #contact-form select,   
+ #contact-form textarea { 
+    width:100%;
+    background: rgb(255, 255, 255, 1);
+    box-shadow:inset 0 1px 10px rgba(41, 41, 41, 0.2);
+    border: 0; 
+    -moz-border-radius: 4px;  
+    -webkit-border-radius: 4px;  
+    border-radius: 4px;
+    margin-bottom: 25px;  
+    padding: 5px;  
+ }  
+ #contact-form input:focus,   
+ #contact-form select:focus,   
+ #contact-form textarea:focus {  
+    background-color: #E5E6E7; 
+ }  
+ #contact-form textarea {
+    width:100%;
+    height: 150px;
+ }
+ #contact-form button[type="submit"] {
+    cursor:pointer;
+    width:100%;
+    border:none;
+    background:#6B1215;
+    background-image:linear-gradient(bottom, #350000 0%, #6B1215 52%);
+    background-image:-moz-linear-gradient(bottom, #350000 0%, #6B1215 52%);
+    background-image:-webkit-linear-gradient(bottom, #350000 0%, #6B1215 52%);
+    color:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+ }
+ #contact-form button[type="submit"]:hover {
+    background-image:linear-gradient(bottom, #6B1215 0%, #9e5759 52%);
+    background-image:-moz-linear-gradient(bottom, #6B1215 0%, #9e5759 52%);
+    background-image:-webkit-linear-gradient(bottom, #6B1215 0%, #9e5759 52%);
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+ }
+ #contact-form button[type="submit"]:active {
+    box-shadow:inset 0 1px 3px rgba(0,0,0,0.9);
+ }
+ input:required, textarea:required {  
+    box-shadow: none;
+    -moz-box-shadow: none;  
+    -webkit-box-shadow: none;  
+    -o-box-shadow: none;  
+ } 
+ #contact-form .required { 
+    color: rgb(194, 194, 194);      
+ }
+ 
+ /* Hide success/failure message
+    (especially since the php is missing) */
+ #failure, #success {
+    color: #6EA070; 
+    display:none;  
+ }
+ 
+ /* Make form look nice on smaller screens */
+ @media only screen and (max-width: 580px) {
+    #contact-form{
+       width: 88%;
+       margin-left: 0;
+       padding-left: 3%;
+       padding-right: 3%;
+    }
+ }
+/*------------------------------------*\
+FOOTER
+\*------------------------------------*/
+.lien{
+    background-color: #600D0F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .lien img{
+    padding: 10px;
+    margin-top: 20%;
+    margin-bottom: 30%;
+}
+
+footer .lien p{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 15%;
+}
+
+.copyright{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    color:white;
+    font-size: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 5%;
+}

@@ -1,0 +1,344 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: "roboto slab";
+}
+ol, ul {
+    list-style: none;
+    
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(233, 233, 233);
+    line-height: 1;
+    font-family: "roboto slab";
+    padding-top:60px;
+}
+
+
+/*------------------------------------*\
+START / NAV
+\*------------------------------------*/
+header{
+    display: flex;
+}
+
+
+.nav{
+    background-color:#6B1215;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top:0;
+    left:0;
+    
+}
+
+.navlist{
+    margin-right: 0px auto;
+    padding: 0; 
+    float: right;
+}
+.nav-list-item{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    margin-left: 35px;
+}
+.nav-list-item:hover{
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+@media only screen and (max-width: 768px){ 
+    .nav{
+        display: block;
+    }
+    .navlist{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+        left: 0;
+        width: 100%;
+        margin-top: 60px;
+        top: 0;
+        background-color: #600D0F;;
+        position: fixed;
+        transform: translateY(-1000px);
+    }
+    
+    .nav-list-item{
+        margin-left: 0;
+    }
+    
+    .navlist li{
+        display: block;
+        text-align: center;
+        margin-top: -15%;
+    }
+    
+    .withSidebar .navlist{
+        transform: translateY(0);
+    }
+    .withSidebar .nav-list-item:hover{
+        border-bottom: 1px solid white;
+    }
+/*------------------------------------*\
+Btn
+\*------------------------------------*/
+.buttonBurger{
+    float:right;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 40px;
+    padding:0;
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  .buttonBurger__top, .buttonBurger__middle, .buttonBurger__bottom{
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left:0;
+    background:white;
+    transition: all .4s ease;
+  }
+  .buttonBurger__top{
+    top: 0%;
+  }
+  .buttonBurger__top--active{
+    top: 50%;
+    margin-top:-2px;
+    transform: rotate(405deg);
+  }
+  .buttonBurger__middle{
+    top: 50%;
+    margin-top:-2px;
+  }
+  .buttonBurger__middle--active{
+    transform: rotate(405deg);
+  }
+  .buttonBurger__bottom{
+    top: 100%;
+    margin-top:-4px;
+  }
+  .buttonBurger__bottom--active{
+    top: 50%;
+    margin-top:-2px;
+    transform: rotate(675deg);
+  }
+  .buttonBurger:hover .buttonBurger__top{
+    top: 50%;
+    margin-top:-2px;
+  }
+  .buttonBurger:hover .buttonBurger__bottom{
+    top: 50%;
+    margin-top:-2px;
+  }
+
+    }
+/*------------------------------------*\
+HEADER
+\*------------------------------------*/
+.logo{
+    background: url("img/plate2.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:calc(100vh - 60px);
+}
+@media only screen and (max-width: 768px){
+.logo{
+    background: url("img/planche.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:calc(100vh - 60px);
+}
+}
+
+.logo img {
+    margin: 0 auto;
+    padding: 3%;
+    
+}
+
+.logo h1 {
+    font-family: Arizonia;
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 1px 1px 10px black;  
+}
+/*------------------------------------*\
+MAIN
+\*------------------------------------*/
+main{
+    margin:0;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu img{
+    width: 100%;
+    height: auto;
+}
+/*------------------------------------*\
+MAIN
+\*------------------------------------*/
+@media only screen and (min-width: 769px){
+main{
+    margin:0;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.menu a{
+    width: 50%;
+    height: auto;
+}
+}
+/*------------------------------------*\
+MAIN
+\*------------------------------------*/
+@media only screen and (min-width: 1000px){ 
+main{
+    margin:0;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.menu a{
+    width: 50%;
+    height: auto;
+}
+}
+/*------------------------------------*\
+MAIN
+\*------------------------------------*/
+@media only screen and (min-width: 1500px){ 
+    main{
+        margin:0;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    
+    .menu a{
+        width: 40%;
+        height: auto;
+    }
+    }
+/*------------------------------------*\
+FOOTER
+\*------------------------------------*/
+.lien{
+    background-color: #600D0F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .lien img{
+    padding: 10px;
+    margin-top: 20%;
+    margin-bottom: 30%;
+}
+
+footer .lien p{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 15%;
+}
+
+.copyright{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    color:white;
+    font-size: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 5%;
+}

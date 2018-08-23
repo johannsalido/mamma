@@ -1,0 +1,477 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: "roboto slab";
+}
+ol, ul {
+    list-style: none;
+    
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{  
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+/*------------------------------------*\
+START / NAV
+\*------------------------------------*/
+header{
+    display: flex;
+}
+
+
+.nav{
+    background-color:#6B1215;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top:0;
+    left:0;
+    
+}
+
+.navlist{
+    margin-right: 0px auto;
+    padding: 0; 
+    float: right;
+}
+.nav-list-item{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    position: relative;
+    margin-left: 35px;
+}
+.nav-list-item:hover{
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+@media only screen and (max-width: 768px){ 
+    .nav{
+        display: block;
+    }
+    .navlist{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+        left: 0;
+        width: 100%;
+        margin-top: 60px;
+        top: 0;
+        background-color: #600D0F;;
+        position: fixed;
+        transform: translateY(-1000px);
+    }
+    
+    .nav-list-item{
+        margin-left: 0;
+    }
+    
+    .navlist li{
+        display: block;
+        text-align: center;
+        margin-top: -15%;
+    }
+    
+    .withSidebar .navlist{
+        transform: translateY(0);
+    }
+    .withSidebar .nav-list-item:hover{
+        border-bottom: 1px solid white;
+    }
+/*------------------------------------*\
+Btn
+\*------------------------------------*/
+.buttonBurger{
+    float:right;
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    height: 30px;
+    width: 40px;
+    padding:0;
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  .buttonBurger__top, .buttonBurger__middle, .buttonBurger__bottom{
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left:0;
+    background:white;
+    transition: all .4s ease;
+  }
+  .buttonBurger__top{
+    top: 0%;
+  }
+  .buttonBurger__top--active{
+    top: 50%;
+    margin-top:-2px;
+    transform: rotate(405deg);
+  }
+  .buttonBurger__middle{
+    top: 50%;
+    margin-top:-2px;
+  }
+  .buttonBurger__middle--active{
+    transform: rotate(405deg);
+  }
+  .buttonBurger__bottom{
+    top: 100%;
+    margin-top:-4px;
+  }
+  .buttonBurger__bottom--active{
+    top: 50%;
+    margin-top:-2px;
+    transform: rotate(675deg);
+  }
+  .buttonBurger:hover .buttonBurger__top{
+    top: 50%;
+    margin-top:-2px;
+  }
+  .buttonBurger:hover .buttonBurger__bottom{
+    top: 50%;
+    margin-top:-2px;
+  }
+
+    }
+/*------------------------------------*\
+HEADER
+\*------------------------------------*/
+.logo{
+    background: url(img/plate2.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(112.7vh - 60px);
+}
+@media only screen and (max-width: 768px){
+.logo{
+    background: url("img/planche.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:calc(100vh - 60px);
+}
+}
+
+.logo img {
+    margin: 0 auto;
+    padding: 3%;
+    
+}
+
+.logo h1 {
+    font-family: Arizonia;
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 1px 1px 10px black;  
+}
+
+/* -----------------START--------------------*/
+.page{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(4,1fr);
+    margin-bottom: 10%;
+}
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    grid-column: 1/ span 12;
+    grid-row: 1/1;
+}
+p{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 2%;
+}
+.merci{
+    color: #600D0F;
+}
+.page img{
+    box-shadow: 0px 2px 25px -5px;
+}
+hr{
+    width: 31%;
+    height: 1px;
+    background-color:#6B1215;
+    border: none;
+}
+/* -----------------LIVRE D'OR--------------------*/
+.livreor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+    grid-column: 1/ span 12;
+    grid-row: 1/1;
+}
+.livreor img{
+    width: 20%;
+}
+
+/* -----------------PHOTO 1--------------------*/
+.photo1 img{
+    width: 92%;
+    height: auto;
+    
+}
+.photo1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    grid-column: 3/7;
+    grid-row: 2/4;
+}
+/* -----------------PHOTO 2--------------------*/
+.photo2 img{
+    width: 98%;
+    height: auto;
+}
+.photo2{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    grid-column: 7/11;
+    grid-row: 2/3;
+}
+/* -----------------PHOTO 3--------------------*/
+.photo3 img{
+    width: 92%;
+    height: auto;
+}
+.photo3{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    grid-column: 3/7;
+    grid-row: 3/4;
+}
+/* -----------------PHOTO 4--------------------*/
+.photo4 img{
+    width: 98%;
+    height: auto;
+    margin-top: 5%;
+}
+.photo4{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    grid-column: 7/11;
+    grid-row: 3/5;
+}
+/* -----------------PHOTO 5--------------------*/
+.photo5 img{
+    width: 92%;
+    margin-top: 5%;
+    height: auto;
+}
+.photo5{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    grid-column: 3/7;
+    grid-row: 4/6;
+}
+/* -----------------PHOTO 6--------------------*/
+.photo6 img{
+    width: 54%;
+    margin-top: -7%;
+    height: auto;
+}
+.photo6{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    grid-column: 3/7;
+    grid-row: 4/5;
+}
+
+/*------------------------------------*\
+FOOTER
+\*------------------------------------*/
+.lien{
+    background-color: #600D0F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .lien img{
+    padding: 10px;
+    margin-top: 20%;
+    margin-bottom: 30%;
+}
+
+footer .lien p{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 15%;
+}
+
+.copyright{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    color:white;
+    font-size: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 5%;
+}
+@media only screen and (min-width: 1024px){
+/*------------------------------------*\
+FOOTER
+\*------------------------------------*/
+footer .lien img{
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+footer .lien p{
+    font-size: 0.9rem;
+    margin-bottom: 15%;
+}
+
+.copyright{
+    font-size: 0.6rem; 
+}
+}
+
+@media only screen and (min-width: 1650px){
+/*------------------------------------*\
+FOOTER
+\*------------------------------------*/
+footer .lien img{
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+footer .lien p{
+    font-size: 1rem;
+    margin-bottom: 10%;
+}
+
+.copyright{
+    font-size: 0.6rem;
+}
+}
+
+@media only screen and (max-width: 768px){
+
+.page{
+        
+        display: flex;
+        padding: 5%;
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .livreor img{
+        width: 40%;
+        margin-bottom: 5%;
+    }
+ /* -----------------PHOTO 1--------------------*/
+.photo1 img{
+    margin-top: 5%;
+    width: 80%;
+    height: auto;
+}
+
+/* -----------------PHOTO 2--------------------*/
+.photo2 img{
+    width: 80%;
+    height: auto;
+   margin-top: 5%;
+}
+
+/* -----------------PHOTO 3--------------------*/
+.photo3 img{
+    width: 80%;
+    height: auto;
+    margin-top: 5%;
+}
+
+/* -----------------PHOTO 4--------------------*/
+.photo4 img{
+    width: 80%;
+    height: auto;
+}
+
+/* -----------------PHOTO 5--------------------*/
+.photo5 img{
+    width: 80%;
+    height: auto;
+}
+
+/* -----------------PHOTO 6--------------------*/
+.photo6 img{
+    width: 80%;
+    margin-top: 5%;
+    height: auto;
+}
+}
