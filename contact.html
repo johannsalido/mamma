@@ -60,40 +60,28 @@
             <p id="success">message envoyé avec succès. Merci!</p>
     
             <form name="contact" method="POST" netlify>
-                <div>
-                  <label for="name">
-                      <span class="required">Nom: *</span> 
-                      <input type="text" id="name" name="name" value="" placeholder="Votre nom" required="required" tabindex="1" autofocus="autofocus" />
-                  </label> 
-                </div>
-                <div>
-                  <label for="email">
-                      <span class="required">Email: *</span>
-                      <input type="email" id="email" name="email" value="" placeholder="Votre Email" tabindex="2" required="required" />
-                  </label>  
-                </div>
-                <div>		          
-                  <label for="subject">
-                  <span>Objet: </span>
-                      <select id="subject" name="Objet" tabindex="4">   
-                         <option value="hello">Qu'elle est l'objet de votre question ?</option>
+                <p>
+                  <label>Votre Nom: <input type="text" name="name" /></label>   
+                </p>
+                <p>
+                  <label>Votre Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Sujet: <select name="role[]" multiple>
+                    <option value="hello">Qu'elle est l'objet de votre question ?</option>
                          <option value="quote">Réservation</option>  
                          <option value="general"> Renseignement(s)</option>
                          <option value="general"> Réclamation(s)</option>
                          <option value="general"> Autre ?</option>
-                      </select>
-                  </label>
-                </div>
-                <div>		          
-                  <label for="message">
-                      <span class="required">Message: *</span> 
-                      <textarea id="message" name="message" placeholder="S'il vous plait écrivez votre message ici.." tabindex="5" required="required"></textarea> 
-                  </label>  
-                </div>
-                <div>		           
-                  <button name="submit" type="submit" id="submit" >ENVOYÉ</button> 
-                </div>
-               </form>
+                  </select></label>
+                </p>
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Envoyé</button>
+                </p>
+              </form>
         </div>
     </main>
         <footer>
