@@ -67,13 +67,16 @@
                   <label>Votre Email: <input type="email" name="email" /></label>
                 </p>
                 <p>
-                  <label>Sujet: <select name="role[]" multiple>
-                    <option value="hello">Qu'elle est l'objet de votre question ?</option>
-                         <option value="quote">Réservation</option>  
-                         <option value="general"> Renseignement(s)</option>
-                         <option value="general"> Réclamation(s)</option>
-                         <option value="general"> Autre ?</option>
-                  </select></label>
+                    <label for="subject">
+                        <span>Objet: </span>
+                            <select id="subject" name="Objet" tabindex="4">   
+                               <option value="hello">Qu'elle est l'objet de votre question ?</option>
+                               <option value="quote">Réservation</option>  
+                               <option value="general"> Renseignement(s)</option>
+                               <option value="general"> Réclamation(s)</option>
+                               <option value="general"> Autre ?</option>
+                            </select>
+                        </label>
                 </p>
                 <p>
                   <label>Message: <textarea name="message"></textarea></label>
