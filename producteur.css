@@ -198,7 +198,7 @@ Btn
 HEADER
 \*------------------------------------*/
 .logo{
-    background: url("img/plate2.jpg") no-repeat center center;
+    background: url("img/platenew.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -207,7 +207,7 @@ HEADER
 }
 @media only screen and (max-width: 768px){
 .logo{
-    background: url("img/planche.jpg") no-repeat center center;
+    background: url("img/planchenew.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;

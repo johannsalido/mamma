@@ -199,7 +199,7 @@ Btn
 HEADER
 \*------------------------------------*/
 .logo{
-    background: url("img/plate2.jpg") no-repeat center center;
+    background: url("img/platenew.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -208,7 +208,7 @@ HEADER
 }
 @media only screen and (max-width: 768px){
 .logo{
-    background: url("img/planche.jpg") no-repeat center center;
+    background: url("img/planchenew.jpg") no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -440,9 +440,9 @@ ANIMATE NUMBERS
 AVIS
 \*------------------------------------*/
 .avis{
-    background: url("element/platetall2.png") no-repeat center center;
+    background: url("element/platenote.jpg") no-repeat center center;
     background-size: cover;
-    margin-top: -10%;
+    margin-top: 4%;
 }
 .avis article{
     display: flex;
@@ -452,7 +452,7 @@ AVIS
 }
 
 .avis p{
-      margin-top: 50%;
+      margin-top: 34%;
       color: white;
       text-align: center;
       font-size: 0.8rem;
@@ -464,9 +464,8 @@ AVIS
 
 .avis img {
       justify-content: center;
-      width: 40%;
+      width: 30%;
       height: auto;
-      margin-bottom: -5%;
 }
 
 /*------------------------------------*\
@@ -899,7 +898,7 @@ AVIS
 }
 
 .avis img{
-    width: 30%;
+    width: 22%;
 }
 /*------------------------------------*\
 FOOTER
@@ -917,3 +916,141 @@ footer .lien p{
     font-size: 0.6rem;
 }
 }
+
+/*------------------------------------*\
+CSS PAGE MENU
+\*------------------------------------*/
+/*------------------------------------*\
+MAIN
+\*------------------------------------*/
+h2{
+    font-family: "Merriweather";
+    font-size: 17px;
+    font-weight: 700;
+    color: #6B1215;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 5%;
+}
+
+h2:before{
+    content:"";
+    display:inline-block;
+    width:30px;
+    height:59px;
+    background:url(element/menu.png) no-repeat;
+    background-size:100%;
+    margin:0px 0px -36px 0;
+}
+h2:after{
+    
+    content:"";
+    display:inline-block;
+    width:30px;
+    height:59px;
+    background:url(element/menu.png) no-repeat;
+    background-size:100%;
+    margin:0px 0px -36px 0px;
+}
+
+main{
+    margin:0;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu img{
+    width: 100%;
+    height: auto;
+}
+
+/*------------------------------------*\
+MAIN
+\*------------------------------------*/
+@media only screen and (min-width: 769px){
+    main{
+        margin:0;
+    }
+    
+    h2{
+        font-size: 1.5rem;
+    }
+    h2:before{
+        width: 50px;
+        margin:0px 50px -30px 0;
+    }
+    h2:after{
+        width: 50px;
+        margin:0px 0px -30px 50px;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    
+    .menu a{
+        width: 50%;
+        height: auto;
+    }
+    }
+    /*------------------------------------*\
+    MAIN
+    \*------------------------------------*/
+    @media only screen and (min-width: 1000px){ 
+    main{
+        margin:0;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    
+    h2:before{
+        margin:0px 80px -20px 0;
+    }
+    
+    h2:after{
+        margin:0px 0px -20px 80px;
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    
+    .menu a{
+        width: 50%;
+        height: auto;
+    }
+    }
+    /*------------------------------------*\
+    MAIN
+    \*------------------------------------*/
+    @media only screen and (min-width: 1500px){ 
+        main{
+            margin:0;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        
+        .menu a{
+            width: 40%;
+            height: auto;
+        }
+        }
+/*------------------------------------*\
+END CSS PAGE MENU
+\*------------------------------------*/
